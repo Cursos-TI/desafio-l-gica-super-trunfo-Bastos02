@@ -5,7 +5,7 @@ int main() {
 //Variaveis da primeira carta 01 
     char Estado[50];
     char Cidade[50];
-    int Populacao;
+    unsigned long int Populacao;
     double Area;
     float PIB;
     int PontosTuristicos;
@@ -59,7 +59,7 @@ int main() {
 //Variaveis da segunda carta 02
     char Estado2[50];
     char Cidade2[50];
-    int Populacao2;
+     unsigned long int Populacao2;
     double Area2;
     float PIB2;
     int PontosTuristicos2;
