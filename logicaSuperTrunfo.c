@@ -99,9 +99,15 @@ int main() {
     printf("Número de Pontos turísticos: ");
     scanf("%d", &PontosTuristicos2);
 
-    // Variáveis Densidade Populacional(DP), PIB per Capita (PIBpc) carta 2
+// Variáveis Densidade Populacional(DP), PIB per Capita (PIBpc) carta 2
     float DP2 = Populacao2 / Area2;
     float PIBpc2 = (PIB2 * 1e9) / (float)Populacao2;
+
+//super poder
+    float superpoder2;
+    int inversodaDP2 = Area2 / Populacao2;
+    superpoder2 = Populacao2 + Area2 + PIB2 + PontosTuristicos2 + PIBpc2 + inversodaDP2;
+
 
 //carta apresentada
     printf("\n   Carta Apresentada\n");
@@ -114,6 +120,8 @@ int main() {
     printf("PONTOS TURÍSTICOS: %d\n", PontosTuristicos2);
     printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", DP2);
     printf("PIB PER CAPITA: %.2f reais\n", PIBpc2);
+    printf("SUPER PODER: %d\n", superpoder2);
+
 
 return 0;
 }
