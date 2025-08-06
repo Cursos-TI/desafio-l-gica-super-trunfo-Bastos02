@@ -44,6 +44,11 @@ int main() {
     float DP = Populacao / Area;
     float PIBpc = (PIB *1e9) / (float)Populacao;
 
+//super poder
+    float superpoder1;
+    int inversodaDP = Area / Populacao;
+    superpoder1 = Populacao + Area + PIB + PontosTuristicos + PIBpc + inversodaDP;
+
 //carta apresentada
     printf("\n   Carta Apresentada\n");
     printf("CÓDIGO: %s\n", codigo);
@@ -55,6 +60,7 @@ int main() {
     printf("PONTOS TURÍSTICOS: %d\n", PontosTuristicos);
     printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", DP);
     printf("PIB PER CAPITA: %.2f reais\n", PIBpc);
+    printf("SUPER PODER: %d\n", superpoder1);
 
 //Variaveis da segunda carta 02
     char Estado2[50];
