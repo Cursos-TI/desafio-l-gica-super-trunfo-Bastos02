@@ -50,7 +50,7 @@ int main() {
     superpoder1 = Populacao + Area + PIB + PontosTuristicos + PIBpc + inversodaDP;
 
 //carta apresentada
-    printf("\n   Carta Apresentada\n");
+    printf("\n   Carta 1 Apresentada\n");
     printf("CÓDIGO: %s\n", codigo);
     printf("ESTADO: %s\n", Estado);
     printf("CIDADE: %s\n", Cidade);
@@ -110,7 +110,7 @@ int main() {
 
 
 //carta apresentada
-    printf("\n   Carta Apresentada\n");
+    printf("\n   Carta 2 Apresentada\n");
     printf("CÓDIGO: %s\n", codigo2);
     printf("ESTADO: %s\n", Estado2);
     printf("CIDADE: %s\n", Cidade2);
@@ -124,9 +124,24 @@ int main() {
 
 //Comaparação das duas cartas
 
+   
+    int resulatadoP = (Populacao > Populacao2);
+    int resulatadoA = (Area > Area2); 
+    int resulatadoPIB = (PIB > PIB2);  
+    int resulatadoPT = (PontosTuristicos > PontosTuristicos2); 
+    int resulatadoDP = (inversodaDP > inversodaDP2);
+    int resulatadoPIBpc = (PIBpc > PIBpc2);
+    int resulatadoSP = (superpoder1 > superpoder2);
 
 
-
+    printf("\n-- RESULTADO: CARTA 1 >(1) E CARTA 2 >(0) --\n");
+    printf("POPULAÇÃO, CARTA ( %d ) VENCEU!\n", resulatadoP );
+    printf("ÁREA, CARTA ( %d ) VENCEU!\n", resulatadoA );
+    printf("PIB, CARTA ( %d ) VENCEU!\n", resulatadoPIB );
+    printf("PONTOS TURISTICOS, CARTA ( %d ) VENCEU!\n", resulatadoPT );
+    printf("DENSIDADE DEMOGRAFICA, CARTA ( %d ) VENCEU!\n", resulatadoDP);
+    printf("PIB PER CAPTA, CARTA ( %d ) VENCEU!\n", resulatadoPIBpc );
+    printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resulatadoSP );
 
 
 
