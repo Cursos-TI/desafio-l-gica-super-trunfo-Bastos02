@@ -143,7 +143,7 @@ int main() {
     printf("PIB PER CAPTA, CARTA ( %d ) VENCEU!\n", resulatadoPIBpc );
     printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resulatadoSP );
 
-
+    printf("\n=== FIM DO JOGO ===\n");
 
 return 0;
 }
