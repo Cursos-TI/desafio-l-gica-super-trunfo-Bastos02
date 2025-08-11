@@ -143,7 +143,7 @@ int main() {
 
 //Escolhendo um atributo para comparar
     int atributovencedor = (Populacao > Populacao2);
-    printf("ATRIBUTO ESCOLHIDO 'POPULAÇÃO':\n");
+    printf("\nATRIBUTO ESCOLHIDO 'POPULAÇÃO':\n");
     printf("POPULAÇÃO CARTA 1 : %lu\n", Populacao);
     printf("POPULAÇÃO CARTA 2 : %lu\n", Populacao2);
     if (atributovencedor == 1) {
