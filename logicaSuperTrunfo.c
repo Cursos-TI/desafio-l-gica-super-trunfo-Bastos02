@@ -103,7 +103,7 @@ int main() {
     float DP2 = Populacao2 / Area2;
     float PIBpc2 = (PIB2 * 1e9) / (float)Populacao2;
 
-//super poder
+//super poder carta 2
     float superpoder2;
     double inversodaDP2 = Area2 / Populacao2;
     superpoder2 = Populacao2 + Area2 + PIB2 + PontosTuristicos2 + PIBpc2 + inversodaDP2;
@@ -123,8 +123,6 @@ int main() {
     printf("SUPER PODER: %f\n", superpoder2);
 
 //Comaparação das duas cartas
-
-   
     int resulatadoP = (Populacao > Populacao2);
     int resulatadoA = (Area > Area2); 
     int resulatadoPIB = (PIB > PIB2);  
@@ -143,7 +141,18 @@ int main() {
     printf("PIB PER CAPTA, CARTA ( %d ) VENCEU!\n", resulatadoPIBpc );
     printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resulatadoSP );
 
-    printf("\n=== FIM DO JOGO ===\n");
+//Escolhendo um atributo para comparar
+    int atributovencedor = (Populacao > Populacao2);
+    printf("ATRIBUTO ESCOLHIDO 'POPULAÇÃO':\n");
+    printf("POPULAÇÃO CARTA 1 : %lu\n", Populacao);
+    printf("POPULAÇÃO CARTA 2 : %lu\n", Populacao2);
+    if (atributovencedor == 1) {
+        printf("A CIDADE DE %s GANHOU!\n", Cidade);
+    } else {
+        printf("A CIDADE DE %s GANHOU!\n", Cidade2);
+    
+//FIM DE JOGO    
+printf("\n=== FIM DO JOGO ===\n");}
 
 return 0;
 }
