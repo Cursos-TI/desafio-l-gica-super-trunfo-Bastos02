@@ -150,21 +150,69 @@ printf("(3) -> Área\n");
 printf("(4) -> PIB\n");
 printf("(5) -> Pontos Turisticos\n");
 printf("(6) -> Densidade demografica\n");
-scanf("Digite a opção desejada -> %d", &comparacao);//Jogador escolhendo um atributo para comparar
+printf("Digite a opção desejada -> ");
+scanf("%d", &comparacao);//Jogador escolhendo um atributo para comparar")
 
 //switicg para o menu
 switch (comparacao)
 {
 case 1:
-    printf("- COMPARAÇÃO ENTRE\n %s <-> %s\n", pais, pais2);
-    break;
-
+    printf("- COMPARAÇÃO ENTRE\n %s (%s) <-> %s (%s)\n", pais, estado, pais2, estado2);
+break;
+case 2:
+    printf("A População de %s são de: %lu <-> A População de %s são de: %lu \n", estado, Populacao, estado2, Populacao2);
+    if (Populacao > Populacao2){
+    printf("O estado de %s Tem a população MAIOR que o estado de %s.\n",estado, estado2);
+    printf("PAIS %s VENCEU", pais);
+    } else {
+     printf("O estado de %s Tem a população MAIOR que o estado de %s.\n",estado2, estado);
+    printf("PAIS %s VENCEU", pais2);
+    }
+break;
+case 3:
+    printf("A área de %s é de: %.2lf <-> A área de %s é de: %.2lf \n", estado, Area, estado2, Area2);
+    if (Area > Area2){
+    printf("O estado de %s Tem a área MAIOR que o estado de %s.\n",estado, estado2);
+    printf("PAIS %s VENCEU", pais);
+    } else {
+     printf("O estado de %s Tem a área MAIOR que o estado de %s.\n",estado2, estado);
+    printf("PAIS %s VENCEU", pais2);
+    }
+break;
+case 4:
+    printf("O PIB de %s é de: %.2f <-> O PIB de %s é de: %.2f \n", estado, PIB, estado2, PIB2);
+    if (PIB > PIB2){
+    printf("O estado de %s Tem o PIB MAIOR que o estado de %s.\n",estado, estado2);
+    printf("PAIS %s VENCEU", pais);
+    } else {
+     printf("O estado de %s Tem o PIB MAIOR que o estado de %s.\n",estado2, estado);
+    printf("PAIS %s VENCEU", pais2);
+    }
+break;
+case 5:
+    printf("%s tem: %d Pontos turisticos <-> %s tem: %d Pontos turisticos\n", estado, PontosTuristicos, estado2, PontosTuristicos2);
+    if (PontosTuristicos > PontosTuristicos2){
+    printf("O estado de %s Tem MAIS pontos turisticos que o estado de %s.\n",estado, estado2);
+    printf("PAIS %s VENCEU", pais);
+    } else {
+    printf("O estado de %s Tem MAIS pontos turisticos que o estado de %s.\n",estado2, estado);
+    printf("PAIS %s VENCEU", pais2);
+    }
+break;
+case 6:
+    printf("O estado de %s tem densidade demografica: %.2f <-> O estado de %s tem densidade demografica: %.2f\n", estado, DP, estado2, DP2);
+    if (DP < DP2){
+    printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado, estado2);
+    printf("PAIS %s VENCEU", pais);
+    } else {
+    printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado2, estado);
+    printf("PAIS %s VENCEU", pais2);
+    }
+break;
 default:
-    break;
+    printf("- OPÇÃO INVALIDA -\n");
+break;
 }
-
-
-    
 //FIM DE JOGO    
 printf("\n=== FIM DO JOGO ===\n");
 
