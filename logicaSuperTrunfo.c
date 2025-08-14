@@ -3,8 +3,8 @@
 int main() {
 
 //Variaveis da primeira carta 01 
-    char Estado[50];
-    char Cidade[50];
+    char pais[50];
+    char estado[50];
     unsigned long int Populacao;
     double Area;
     float PIB;
@@ -19,14 +19,14 @@ int main() {
     printf("\n   Carta 01\n");
 
 //Informações do primeiro Estado
-    printf("Nome do Estado: ");
-    scanf("%s", Estado);
+    printf("Nome do PAÍS: ");
+    scanf("%s", pais);
     printf("Código da Carta: ");
     scanf("%s", codigo);
 
 //informações da primeira cidade
-    printf("Nome da Cidade: ");
-    scanf("%s", Cidade);
+    printf("Nome do Estado: ");
+    scanf("%s", estado);
     
     printf("População: ");
     scanf("%lu", &Populacao);
@@ -52,8 +52,8 @@ int main() {
 //carta apresentada
     printf("\n   Carta 1 Apresentada\n");
     printf("CÓDIGO: %s\n", codigo);
-    printf("ESTADO: %s\n", Estado);
-    printf("CIDADE: %s\n", Cidade);
+    printf("PAÍS: %s\n", pais);
+    printf("ESTADO: %s\n", estado);
     printf("POPULAÇÃO: %lu\n", Populacao);
     printf("ÁREA: %.2lf km²\n", Area);
     printf("PIB: R$ %.2f bilhões\n", PIB);
@@ -63,8 +63,8 @@ int main() {
     printf("SUPER PODER: %f\n", superpoder1);
 
 //Variaveis da segunda carta 02
-    char Estado2[50];
-    char Cidade2[50];
+    char pais2[50];
+    char estado2[50];
     unsigned long int Populacao2;
     double Area2;
     float PIB2;
@@ -78,14 +78,14 @@ int main() {
     printf("\n   Carta 02\n");
 
 //Informações do segundo Estado
-    printf("Nome do Estado: ");
-    scanf("%s", Estado2);
+    printf("Nome do PAÍS: ");
+    scanf("%s", pais2);
     printf("Código da Carta: ");
     scanf("%s", codigo2);
 
 //informações da segunda cidade
-    printf("Nome da Cidade: ");
-    scanf("%s", Cidade2);
+    printf("Nome do Estado: ");
+    scanf("%s", estado2);
     
     printf("População: ");
     scanf("%lu", &Populacao2);
@@ -112,8 +112,8 @@ int main() {
 //carta apresentada
     printf("\n   Carta 2 Apresentada\n");
     printf("CÓDIGO: %s\n", codigo2);
-    printf("ESTADO: %s\n", Estado2);
-    printf("CIDADE: %s\n", Cidade2);
+    printf("PAÍS: %s\n", pais2);
+    printf("ESTADO: %s\n", estado2);
     printf("POPULAÇÃO: %lu\n", Populacao2);
     printf("ÁREA: %.2lf km²\n", Area2);
     printf("PIB: R$ %.2f bilhões\n", PIB2);
@@ -141,11 +141,32 @@ int main() {
     printf("PIB PER CAPTA, CARTA ( %d ) VENCEU!\n", resulatadoPIBpc );
     printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resulatadoSP );
 
-//Escolhendo um atributo para comparar
+//adicionando uma variavel para armezar a esolha do menu    
+int comparacao;
+printf("- MENU DE COMPARAÇÃO -");
+printf("(1) -> Países");
+printf("(2) -> População");
+printf("(3) -> Área");
+printf("(4) -> PIB");
+printf("(5) -> Pontos Turisticos");
+printf("(6) -> Densidade demografica");
+
+//Jogador escolhendo um atributo para comparar
+
+switch (comparacao)
+{
+case 1:
+    printf("- COMPARAÇÃO ENTRE\n %s <-> %s\n", pais, pais2);
+    break;
+
+default:
+    break;
+}
+
 
     
 //FIM DE JOGO    
-printf("\n=== FIM DO JOGO ===\n");}
+printf("\n=== FIM DO JOGO ===\n");
 
 return 0;
 }
