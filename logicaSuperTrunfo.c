@@ -224,7 +224,7 @@ default:
 break;    
 }
 //FIM DE JOGO    
-printf("\n=== FIM DO JOGO ===\n");
+printf("\n===  FIM DO JOGO  ===\n");
 
 return 0;
 }
