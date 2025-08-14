@@ -60,7 +60,7 @@ int main() {
     printf("PONTOS TURÍSTICOS: %d\n", PontosTuristicos);
     printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", DP);
     printf("PIB PER CAPITA: %.2f reais\n", PIBpc);
-    printf("SUPER PODER: %f\n", superpoder1);
+    printf("SUPER PODER: %.2f\n", superpoder1);
 
 //Variaveis da segunda carta 02
     char pais2[50];
@@ -120,7 +120,7 @@ int main() {
     printf("PONTOS TURÍSTICOS: %d\n", PontosTuristicos2);
     printf("DENSIDADE POPULACIONAL: %.2f hab/km²\n", DP2);
     printf("PIB PER CAPITA: %.2f reais\n", PIBpc2);
-    printf("SUPER PODER: %f\n", superpoder2);
+    printf("SUPER PODER: %.2f\n", superpoder2);
 
 //Comaparação das duas cartas
     int resulatadoP = (Populacao > Populacao2);
@@ -143,16 +143,16 @@ int main() {
 
 //adicionando uma variavel para armezar a esolha do menu    
 int comparacao;
-printf("- MENU DE COMPARAÇÃO -");
-printf("(1) -> Países");
-printf("(2) -> População");
-printf("(3) -> Área");
-printf("(4) -> PIB");
-printf("(5) -> Pontos Turisticos");
-printf("(6) -> Densidade demografica");
+printf("\n- MENU DE COMPARAÇÃO -\n");
+printf("(1) -> Países\n");
+printf("(2) -> População\n");
+printf("(3) -> Área\n");
+printf("(4) -> PIB\n");
+printf("(5) -> Pontos Turisticos\n");
+printf("(6) -> Densidade demografica\n");
+scanf("Digite a opção desejada -> %d", &comparacao);//Jogador escolhendo um atributo para comparar
 
-//Jogador escolhendo um atributo para comparar
-
+//switicg para o menu
 switch (comparacao)
 {
 case 1:
