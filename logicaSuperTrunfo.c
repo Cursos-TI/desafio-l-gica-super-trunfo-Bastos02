@@ -142,14 +142,7 @@ int main() {
     printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resulatadoSP );
 
 //Escolhendo um atributo para comparar
-    int atributovencedor = (Populacao > Populacao2);
-    printf("\nATRIBUTO ESCOLHIDO 'POPULAÇÃO':\n");
-    printf("POPULAÇÃO DA CIDADE DE %s : %lu\n", Cidade, Populacao);
-    printf("POPULAÇÃO DA CIDADE DE %s : %lu\n", Cidade2, Populacao2);
-    if (atributovencedor == 1) {
-        printf("A CIDADE DE %s GANHOU!\n", Cidade);
-    } else {
-        printf("A CIDADE DE %s GANHOU!\n", Cidade2);
+
     
 //FIM DE JOGO    
 printf("\n=== FIM DO JOGO ===\n");}
