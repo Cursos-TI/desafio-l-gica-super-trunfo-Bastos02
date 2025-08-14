@@ -164,6 +164,8 @@ case 2:
     if (Populacao > Populacao2){
     printf("O estado de %s Tem a população MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
+    }else if (Populacao == Populacao2) {
+    printf("- O JOGO EMPATOU -\n");
     } else {
      printf("O estado de %s Tem a população MAIOR que o estado de %s.\n",estado2, estado);
     printf("PAIS %s VENCEU", pais2);
@@ -174,6 +176,8 @@ case 3:
     if (Area > Area2){
     printf("O estado de %s Tem a área MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
+    } else if (Area == Area2){ 
+    printf("- O JOGO EMPATOU -\n");
     } else {
      printf("O estado de %s Tem a área MAIOR que o estado de %s.\n",estado2, estado);
     printf("PAIS %s VENCEU", pais2);
@@ -184,6 +188,8 @@ case 4:
     if (PIB > PIB2){
     printf("O estado de %s Tem o PIB MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
+    } else if (PIB == PIB2) {
+    printf("- O JOGO EMPATOU -\n"); 
     } else {
      printf("O estado de %s Tem o PIB MAIOR que o estado de %s.\n",estado2, estado);
     printf("PAIS %s VENCEU", pais2);
@@ -194,6 +200,8 @@ case 5:
     if (PontosTuristicos > PontosTuristicos2){
     printf("O estado de %s Tem MAIS pontos turisticos que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
+    } else if (PontosTuristicos == PontosTuristicos2) {
+    printf("- O JOGO EMPATOU -\n");
     } else {
     printf("O estado de %s Tem MAIS pontos turisticos que o estado de %s.\n",estado2, estado);
     printf("PAIS %s VENCEU", pais2);
@@ -204,6 +212,8 @@ case 6:
     if (DP < DP2){
     printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
+    } else if (DP == DP2) {
+    printf("- O JOGO EMPATOU -\n");
     } else {
     printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado2, estado);
     printf("PAIS %s VENCEU", pais2);
@@ -211,7 +221,7 @@ case 6:
 break;
 default:
     printf("- OPÇÃO INVALIDA -\n");
-break;
+break;    
 }
 //FIM DE JOGO    
 printf("\n=== FIM DO JOGO ===\n");
