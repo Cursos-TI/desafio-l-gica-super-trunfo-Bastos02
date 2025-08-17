@@ -123,26 +123,30 @@ int main() {
     printf("SUPER PODER: %.2f\n", superpoder2);
 
 //Comaparação das duas cartas
-    int resulatadoP = (Populacao > Populacao2);
-    int resulatadoA = (Area > Area2); 
-    int resulatadoPIB = (PIB > PIB2);  
-    int resulatadoPT = (PontosTuristicos > PontosTuristicos2); 
-    int resulatadoDP = (inversodaDP > inversodaDP2);
-    int resulatadoPIBpc = (PIBpc > PIBpc2);
-    int resulatadoSP = (superpoder1 > superpoder2);
+    int resultadoP = (Populacao > Populacao2);
+    int resultadoA = (Area > Area2); 
+    int resultadoPIB = (PIB > PIB2);  
+    int resultadoPT = (PontosTuristicos > PontosTuristicos2); 
+    int resultadoDP = (inversodaDP > inversodaDP2);
+    int resultadoPIBpc = (PIBpc > PIBpc2);
+    int resultadoSP = (superpoder1 > superpoder2);
 
 
     printf("\n-- RESULTADO: CARTA 1 >(1) E CARTA 2 >(0) --\n");
-    printf("POPULAÇÃO, CARTA ( %d ) VENCEU!\n", resulatadoP );
-    printf("ÁREA, CARTA ( %d ) VENCEU!\n", resulatadoA );
-    printf("PIB, CARTA ( %d ) VENCEU!\n", resulatadoPIB );
-    printf("PONTOS TURISTICOS, CARTA ( %d ) VENCEU!\n", resulatadoPT );
-    printf("DENSIDADE DEMOGRAFICA, CARTA ( %d ) VENCEU!\n", resulatadoDP);
-    printf("PIB PER CAPTA, CARTA ( %d ) VENCEU!\n", resulatadoPIBpc );
-    printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resulatadoSP );
+    printf("POPULAÇÃO, CARTA ( %d ) VENCEU!\n", resultadoP );
+    printf("ÁREA, CARTA ( %d ) VENCEU!\n", resultadoA );
+    printf("PIB, CARTA ( %d ) VENCEU!\n", resultadoPIB );
+    printf("PONTOS TURISTICOS, CARTA ( %d ) VENCEU!\n", resultadoPT );
+    printf("DENSIDADE DEMOGRAFICA, CARTA ( %d ) VENCEU!\n", resultadoDP);
+    printf("PIB PER CAPITA, CARTA ( %d ) VENCEU!\n", resultadoPIBpc );
+    printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resultadoSP );
 
 //variaveis para armazenar a escolha do usuario
 int escolha1 , escolha2;
+
+//SOMATORIA DOS DOIS ATRIBUTOS
+float soma1 = 0, soma2 = 0;
+
 
 //ESCOLHA 1    
 printf("\n- MENU DE COMPARAÇÃO -\n");
@@ -179,6 +183,8 @@ case 1:
 break;
 case 2:
     printf("A População de %s são de: %lu <-> A População de %s são de: %lu \n", estado, Populacao, estado2, Populacao2);
+    soma1 += Populacao;
+    soma2 += Populacao2;
     if (Populacao > Populacao2){
     printf("O estado de %s Tem a população MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -191,6 +197,8 @@ case 2:
 break;
 case 3:
     printf("A área de %s é de: %.2lf <-> A área de %s é de: %.2lf \n", estado, Area, estado2, Area2);
+    soma1 += Area;
+    soma2 += Area2;
     if (Area > Area2){
     printf("O estado de %s Tem a área MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -203,6 +211,8 @@ case 3:
 break;
 case 4:
     printf("O PIB de %s é de: %.2f <-> O PIB de %s é de: %.2f \n", estado, PIB, estado2, PIB2);
+    soma1 += PIB;
+    soma2 += PIB2;
     if (PIB > PIB2){
     printf("O estado de %s Tem o PIB MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -215,6 +225,8 @@ case 4:
 break;
 case 5:
     printf("%s tem: %d Pontos turisticos <-> %s tem: %d Pontos turisticos\n", estado, PontosTuristicos, estado2, PontosTuristicos2);
+    soma1 += PontosTuristicos;
+    soma2 += PontosTuristicos2;
     if (PontosTuristicos > PontosTuristicos2){
     printf("O estado de %s Tem MAIS pontos turisticos que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -227,6 +239,8 @@ case 5:
 break;
 case 6:
     printf("O estado de %s tem densidade demografica: %.2f <-> O estado de %s tem densidade demografica: %.2f\n", estado, DP, estado2, DP2);
+    soma1 += DP;
+    soma2 += DP2;
     if (DP < DP2){
     printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -246,10 +260,12 @@ break;
 switch (escolha2)
 {
 case 1:
-    printf("\n- COMPARAÇÃO ENTRE\n %s (%s) <-> %s (%s)\n", pais, estado, pais2, estado2);
+    printf("- COMPARAÇÃO ENTRE\n %s (%s) <-> %s (%s)\n", pais, estado, pais2, estado2);
 break;
 case 2:
     printf("A População de %s são de: %lu <-> A População de %s são de: %lu \n", estado, Populacao, estado2, Populacao2);
+    soma1 += Populacao;
+    soma2 += Populacao2;
     if (Populacao > Populacao2){
     printf("O estado de %s Tem a população MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -262,6 +278,8 @@ case 2:
 break;
 case 3:
     printf("A área de %s é de: %.2lf <-> A área de %s é de: %.2lf \n", estado, Area, estado2, Area2);
+    soma1 += Area;
+    soma2 += Area2;
     if (Area > Area2){
     printf("O estado de %s Tem a área MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -274,6 +292,8 @@ case 3:
 break;
 case 4:
     printf("O PIB de %s é de: %.2f <-> O PIB de %s é de: %.2f \n", estado, PIB, estado2, PIB2);
+    soma1 += PIB;
+    soma2 += PIB2;
     if (PIB > PIB2){
     printf("O estado de %s Tem o PIB MAIOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -286,6 +306,8 @@ case 4:
 break;
 case 5:
     printf("%s tem: %d Pontos turisticos <-> %s tem: %d Pontos turisticos\n", estado, PontosTuristicos, estado2, PontosTuristicos2);
+    soma1 += PontosTuristicos;
+    soma2 += PontosTuristicos2;
     if (PontosTuristicos > PontosTuristicos2){
     printf("O estado de %s Tem MAIS pontos turisticos que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -298,6 +320,8 @@ case 5:
 break;
 case 6:
     printf("O estado de %s tem densidade demografica: %.2f <-> O estado de %s tem densidade demografica: %.2f\n", estado, DP, estado2, DP2);
+    soma1 += DP;
+    soma2 += DP2;
     if (DP < DP2){
     printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado, estado2);
     printf("PAIS %s VENCEU", pais);
@@ -310,8 +334,14 @@ case 6:
 break;
 default:
     printf("- OPÇÃO INVALIDA -\n");
-break;    
-}
+
+printf("\n--- SOMA DOS RESULTADO ---");
+printf("%s (%s): %.2f\n", pais, estado, soma1);
+printf("%s (%s): %.2f\n", pais2, estado2, soma2);
+
+(soma1 == soma2) ? printf("\n--- O JOGO EMPATOU ---\n"):
+(soma1 > soma2)  ? printf("\n%s VENCEU PELA SOMA FINAL!\n", pais) : printf("\n%s VENCEU PELA SOMA FINAL!\n", pais2);
+
 //FIM DE JOGO    
 printf("\n===  FIM DO JOGO  ===\n");
 
