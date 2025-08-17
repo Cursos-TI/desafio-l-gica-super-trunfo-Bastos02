@@ -167,10 +167,11 @@ printf("Digite a opção desejada -> ");
 scanf("%d", &escolha2);//Jogador escolhendo um atributo para comparar")
 
 if (escolha1 == escolha2) {
-    printf("Você não pode selecionar o mesmo atributo duas vezes, tente novamente!\n");
+    printf("\nVocê não pode selecionar o mesmo atributo duas vezes, tente novamente!\n");
+    return 0;
 }
 
-//COMPARAÇÃO 1
+//COMPARAÇÃO 1dvfcdd
 switch (escolha1)
 {
 case 1:
@@ -233,7 +234,7 @@ case 6:
     printf("- O JOGO EMPATOU -\n");
     } else {
     printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado2, estado);
-    printf("PAIS %s VENCEU", pais2);
+    printf("PAIS %s VENCEU\n", pais2);
     }
 break;
 default:
@@ -245,7 +246,7 @@ break;
 switch (escolha2)
 {
 case 1:
-    printf("- COMPARAÇÃO ENTRE\n %s (%s) <-> %s (%s)\n", pais, estado, pais2, estado2);
+    printf("\n- COMPARAÇÃO ENTRE\n %s (%s) <-> %s (%s)\n", pais, estado, pais2, estado2);
 break;
 case 2:
     printf("A População de %s são de: %lu <-> A População de %s são de: %lu \n", estado, Populacao, estado2, Populacao2);
@@ -304,7 +305,7 @@ case 6:
     printf("- O JOGO EMPATOU -\n");
     } else {
     printf("O estado de %s Tem o Densidade demografica MENOR que o estado de %s.\n",estado2, estado);
-    printf("PAIS %s VENCEU", pais2);
+    printf("PAIS %s VENCEU\n", pais2);
     }
 break;
 default:
