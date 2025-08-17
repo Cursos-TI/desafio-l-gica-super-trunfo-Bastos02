@@ -141,8 +141,10 @@ int main() {
     printf("PIB PER CAPTA, CARTA ( %d ) VENCEU!\n", resulatadoPIBpc );
     printf("SUPER PODER, CARTA ( %d ) VENCEU!\n", resulatadoSP );
 
-//adicionando uma variavel para armezar a esolha do menu    
-int comparacao;
+//variaveis para armazenar a escolha do usuario
+int escolha1 , escolha2;
+
+//ESCOLHA 1    
 printf("\n- MENU DE COMPARAÇÃO -\n");
 printf("(1) -> Países\n");
 printf("(2) -> População\n");
@@ -151,10 +153,25 @@ printf("(4) -> PIB\n");
 printf("(5) -> Pontos Turisticos\n");
 printf("(6) -> Densidade demografica\n");
 printf("Digite a opção desejada -> ");
-scanf("%d", &comparacao);//Jogador escolhendo um atributo para comparar")
+scanf("%d", &escolha1);//Jogador escolhendo um atributo para comparar")
+
+//ESCOLHA 2   
+printf("\n- MENU DE COMPARAÇÃO -\n");
+printf("(1) -> Países\n");
+printf("(2) -> População\n");
+printf("(3) -> Área\n");
+printf("(4) -> PIB\n");
+printf("(5) -> Pontos Turisticos\n");
+printf("(6) -> Densidade demografica\n");
+printf("Digite a opção desejada -> ");
+scanf("%d", &escolha2);//Jogador escolhendo um atributo para comparar")
+
+if (escolha1 == escolha2) {
+    printf("Você não pode selecionar o mesmo atributo duas vezes, tente novamente!\n");
+}
 
 //switicg para o menu
-switch (comparacao)
+switch (op)
 {
 case 1:
     printf("- COMPARAÇÃO ENTRE\n %s (%s) <-> %s (%s)\n", pais, estado, pais2, estado2);
